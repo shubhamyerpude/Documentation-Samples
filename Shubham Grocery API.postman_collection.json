@@ -1,0 +1,2894 @@
+{
+	"info": {
+		"_postman_id": "0278803d-bc4c-44fd-b2bc-a3a1d337f02e",
+		"name": "Shubham Grocery API",
+		"description": "# 🚀 Get started here\n\nThis template guides you through CRUD operations (GET, POST, PUT, DELETE), variables, and tests.\n\n## 🔖 **How to use this template**\n\n#### **Step 1: Send requests**\n\nRESTful APIs allow you to perform CRUD operations using the POST, GET, PUT, and DELETE HTTP methods.\n\nThis collection contains each of these [request](https://learning.postman.com/docs/sending-requests/requests/) types. Open each request and click \"Send\" to see what happens.\n\n#### **Step 2: View responses**\n\nObserve the response tab for status code (200 OK), response time, and size.\n\n#### **Step 3: Send new Body data**\n\nUpdate or add new data in \"Body\" in the POST request. Typically, Body data is also used in PUT request.\n\n```\n{\n    \"name\": \"Add your name in the body\"\n}\n\n ```\n\n#### **Step 4: Update the variable**\n\nVariables enable you to store and reuse values in Postman. We have created a [variable](https://learning.postman.com/docs/sending-requests/variables/) called `base_url` with the sample request [https://postman-api-learner.glitch.me](https://postman-api-learner.glitch.me). Replace it with your API endpoint to customize this collection.\n\n#### **Step 5: Add tests in the \"Scripts\" tab**\n\nAdding tests to your requests can help you confirm that your API is working as expected. You can write test scripts in JavaScript and view the output in the \"Test Results\" tab.\n\n<img src=\"https://content.pstmn.io/fa30ea0a-373d-4545-a668-e7b283cca343/aW1hZ2UucG5n\" width=\"2162\" height=\"1530\">\n\n## 💪 Pro tips\n\n- Use folders to group related requests and organize the collection.\n    \n- Add more [scripts](https://learning.postman.com/docs/writing-scripts/intro-to-scripts/) to verify if the API works as expected and execute workflows.\n    \n\n## 💡Related templates\n\n[API testing basics](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9a37a28-055b-49cd-8c7e-97494a21eb54&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[API documentation](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=e9c28f47-1253-44af-a2f3-20dce4da1f18&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)  \n[Authorization methods](https://go.postman.co/redirect/workspace?type=personal&collectionTemplateId=31a9a6ed-4cdf-4ced-984c-d12c9aec1c27&sourceTemplateId=ddb19591-3097-41cf-82af-c84273e56719)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42931499",
+		"_collection_link": "https://api-testing-1988.postman.co/workspace/API-Testing-Workspace~0f1a0371-c0e1-4727-9be1-bedae30a6087/collection/42931499-0278803d-bc4c-44fd-b2bc-a3a1d337f02e?action=share&source=collection_link&creator=42931499"
+	},
+	"item": [
+		{
+			"name": "v1.0",
+			"item": [
+				{
+					"name": "Test",
+					"item": [
+						{
+							"name": "Status",
+							"item": [
+								{
+									"name": "Status",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": [
+										{
+											"name": "200 Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/status",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"status"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "15"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"f-RQ8OySFd+KR+AvtJ7qImjtT0D/0\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 18:29:13 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4737-BOM, cache-bom4737-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741372153.299671,VS0,VE613"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"status\": \"UP\"\n}"
+										},
+										{
+											"name": "404 Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/statu",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"statu"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "84"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"54-0M1W4PX+XMa0VrPIhDCvHEdTW2w\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 18:31:41 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4729-BOM, cache-bom4729-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741372302.552807,VS0,VE234"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"The resource could not be found. Check your endpoint and request method.\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Products",
+							"item": [
+								{
+									"name": "All Products",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": [
+										{
+											"name": "200 Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/products",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"products"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "1716"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"6b4-RVZTrjCoC03tQFslV/oF2zXZ8Wo\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 18:42:38 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4727-BOM, cache-bom4727-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741372958.852878,VS0,VE238"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"id\": 4643,\n        \"category\": \"coffee\",\n        \"name\": \"Starbucks Coffee Variety Pack, 100% Arabica\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 4646,\n        \"category\": \"coffee\",\n        \"name\": \"Ethical Bean Medium Dark Roast, Espresso\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 4641,\n        \"category\": \"coffee\",\n        \"name\": \"Don Francisco Colombia Supremo Medium Roast\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 1225,\n        \"category\": \"fresh-produce\",\n        \"name\": \"1/2 in. Brushless Hammer Drill\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 3674,\n        \"category\": \"fresh-produce\",\n        \"name\": \"20V Max Cordless Drill Combo Kit\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 2585,\n        \"category\": \"fresh-produce\",\n        \"name\": \"Green Cabbage Organic\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 5851,\n        \"category\": \"fresh-produce\",\n        \"name\": \"Cucumber Organic\",\n        \"inStock\": false\n    },\n    {\n        \"id\": 8739,\n        \"category\": \"fresh-produce\",\n        \"name\": \"Fresh Spinach Organic\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 2177,\n        \"category\": \"meat-seafood\",\n        \"name\": \"Cosco Three Step Steel Platform\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 1709,\n        \"category\": \"meat-seafood\",\n        \"name\": \"Beef Choice Angus Ribeye Steak\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 1709,\n        \"category\": \"meat-seafood\",\n        \"name\": \"Angus Steak Burgers\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 7395,\n        \"category\": \"meat-seafood\",\n        \"name\": \"Boneless Skinless Chicken Breasts\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 8554,\n        \"category\": \"candy\",\n        \"name\": \"Kinder Joy Eggs\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 6483,\n        \"category\": \"candy\",\n        \"name\": \"Cadbury Milk Chocolate\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 5774,\n        \"category\": \"candy\",\n        \"name\": \"HERSHEY'S, Milk Chocolate Almond\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 8753,\n        \"category\": \"dairy\",\n        \"name\": \"Reduced Fat Milk\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 9482,\n        \"category\": \"dairy\",\n        \"name\": \"Whole Milk\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 5477,\n        \"category\": \"dairy\",\n        \"name\": \"Cream Cheese\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 5478,\n        \"category\": \"dairy\",\n        \"name\": \"Low Fat Vanilla Yogurt\",\n        \"inStock\": true\n    },\n    {\n        \"id\": 4875,\n        \"category\": \"bread-bakery\",\n        \"name\": \"2800 Watt Inverter Generator\",\n        \"inStock\": true\n    }\n]"
+										},
+										{
+											"name": "200 Success with ID",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/products/:{ProductID)",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"products",
+														":{ProductID)"
+													],
+													"variable": [
+														{
+															"key": "{ProductID)",
+															"value": "1225"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "149"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"95-AX1X+I+Y9PlcCigJD62Etet+C38\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 18:49:52 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4747-BOM, cache-bom4747-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741373392.321576,VS0,VE266"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"id\": 1225,\n    \"category\": \"fresh-produce\",\n    \"name\": \"1/2 in. Brushless Hammer Drill\",\n    \"manufacturer\": \"Bosch\",\n    \"price\": 12.98,\n    \"current-stock\": 12,\n    \"inStock\": true\n}"
+										},
+										{
+											"name": "404 Resource not found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/products/:{ProductID)",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"products",
+														":{ProductID)"
+													],
+													"variable": [
+														{
+															"key": "{ProductID)",
+															"value": "1230"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "36"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"24-x9wtgRyQIOOXvx0NbS0SJTT9jJE\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 18:50:53 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4743-BOM, cache-bom4743-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741373453.157114,VS0,VE434"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"No product with id 1230.\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Cart",
+							"item": [
+								{
+									"name": "Create New Cart",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": [
+										{
+											"name": "201 Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "49"
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"31-wIvFRXUwTasSETTKbvPL8Av4vH4\""
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 19:16:18 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4746-BOM, cache-bom4746-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741374978.131727,VS0,VE474"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"created\": true,\n    \"cartId\": \"rfKnExbTMxCsfwgLpkBSR\"\n}"
+										},
+										{
+											"name": "404 Not Found",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Cart",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Cart"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "84"
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"54-0M1W4PX+XMa0VrPIhDCvHEdTW2w\""
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 19:17:39 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4748-BOM, cache-bom4748-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741375060.661041,VS0,VE326"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"The resource could not be found. Check your endpoint and request method.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Add item to Cart",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": [
+										{
+											"name": "200 Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\"productId\": 3674}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:Cartid/items",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":Cartid",
+														"items"
+													],
+													"variable": [
+														{
+															"key": "Cartid",
+															"value": "rfKnExbTMxCsfwgLpkBSR"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "35"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"23-myevrVqPtiWpzX36YxKgwtYDDQw\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 19:30:12 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4732-BOM, cache-bom4732-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741375812.974538,VS0,VE428"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"created\": true,\n    \"itemId\": 968043142\n}"
+										},
+										{
+											"name": "404 Invalid ProductID",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\"productId\": 3678}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:Cartid/items",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":Cartid",
+														"items"
+													],
+													"variable": [
+														{
+															"key": "Cartid",
+															"value": "rfKnExbTMxCsfwgLpkBSR"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "41"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"29-oQj3XplkY+x83s6gzA5XvjIR5gM\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 19:32:55 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4724-BOM, cache-bom4724-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741375976.661248,VS0,VE233"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"Invalid or missing productId.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Get Cart Items",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/info?id=1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"info"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1"
+												}
+											]
+										},
+										"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+									},
+									"response": [
+										{
+											"name": "200 Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:{Cartid}/items",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":{Cartid}",
+														"items"
+													],
+													"variable": [
+														{
+															"key": "{Cartid}",
+															"value": "rfKnExbTMxCsfwgLpkBSR"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "2"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 19:25:58 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4750-BOM, cache-bom4750-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741375559.505915,VS0,VE299"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										}
+									]
+								},
+								{
+									"name": "Get Cart Items Copy",
+									"event": [
+										{
+											"listen": "test",
+											"script": {
+												"exec": [
+													"pm.test(\"Status code is 200\", function () {",
+													"    pm.response.to.have.status(200);",
+													"});"
+												],
+												"type": "text/javascript"
+											}
+										}
+									],
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{base_url}}/info?id=1",
+											"host": [
+												"{{base_url}}"
+											],
+											"path": [
+												"info"
+											],
+											"query": [
+												{
+													"key": "id",
+													"value": "1"
+												}
+											]
+										},
+										"description": "This is a GET request and it is used to \"get\" data from an endpoint. There is no request body for a GET request, but you can use query parameters to help specify the resource you want data on (e.g., in this request, we have `id=1`).\n\nA successful GET response will have a `200 OK` status, and should include some kind of response body - for example, HTML web content or JSON data."
+									},
+									"response": [
+										{
+											"name": "200 Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:{Cartid}/items",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":{Cartid}",
+														"items"
+													],
+													"variable": [
+														{
+															"key": "{Cartid}",
+															"value": "rfKnExbTMxCsfwgLpkBSR"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "2"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 19:25:58 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4750-BOM, cache-bom4750-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741375559.505915,VS0,VE299"
+												}
+											],
+											"cookie": [],
+											"body": "[]"
+										},
+										{
+											"name": "Get Cart Items Copy",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:{Cartid}",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":{Cartid}"
+													],
+													"variable": [
+														{
+															"key": "{Cartid}",
+															"value": "DjlTAYUyMKuTxe_t8V2nO"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "95"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"5f-apPJKQ9I368D+fTWSVEnyL9n5ao\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 08 Mar 2025 10:42:09 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4720-BOM, cache-bom4720-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741430529.413038,VS0,VE290"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"items\": [\n        {\n            \"id\": 322369460,\n            \"productId\": 8554,\n            \"quantity\": 1\n        }\n    ],\n    \"created\": \"2025-03-08T10:33:20.210Z\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Modify Item in the Cart",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"Quantity\": 6\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://simple-grocery-store-api.glitch.me/Carts/:Cartid/items/:ItemId",
+											"protocol": "https",
+											"host": [
+												"simple-grocery-store-api",
+												"glitch",
+												"me"
+											],
+											"path": [
+												"Carts",
+												":Cartid",
+												"items",
+												":ItemId"
+											],
+											"variable": [
+												{
+													"key": "Cartid",
+													"value": "DjlTAYUyMKuTxe_t8V2nO"
+												},
+												{
+													"key": "ItemId",
+													"value": "322369460"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "400 Bad Request",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"Quantity\":2\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:Cartid/items/:ItemId",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":Cartid",
+														"items",
+														":ItemId"
+													],
+													"variable": [
+														{
+															"key": "Cartid",
+															"value": "rfKnExbTMxCsfwgLpkBSR"
+														},
+														{
+															"key": "ItemId",
+															"value": "530029838"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "40"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"28-l+7svRfyJ+oWO/udlOaUpRXTIoM\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 19:49:38 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4744-BOM, cache-bom4744-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741376978.136034,VS0,VE227"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"Invalid or missing quantity.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Replacing an item in the cart",
+									"request": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"productId\": 2585,\r\n    \"Quantity\": 1\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://simple-grocery-store-api.glitch.me/Carts/:{Cartid}/items/:itemId",
+											"protocol": "https",
+											"host": [
+												"simple-grocery-store-api",
+												"glitch",
+												"me"
+											],
+											"path": [
+												"Carts",
+												":{Cartid}",
+												"items",
+												":itemId"
+											],
+											"variable": [
+												{
+													"key": "{Cartid}",
+													"value": "rfKnExbTMxCsfwgLpkBSR"
+												},
+												{
+													"key": "itemId",
+													"value": "530029838"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "400 Bad Request",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"productId\": 2177\r\n    \"Quantity\": 3\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:{Cartid}/items/:itemId",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":{Cartid}",
+														"items",
+														":itemId"
+													],
+													"variable": [
+														{
+															"key": "{Cartid}",
+															"value": "rfKnExbTMxCsfwgLpkBSR"
+														},
+														{
+															"key": "itemId",
+															"value": "530029838"
+														}
+													]
+												}
+											},
+											"status": "Bad Request",
+											"code": 400,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "49"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"31-a7teegoqoj5BRUxHxfQJfULWjS4\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Fri, 07 Mar 2025 20:00:09 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4747-BOM, cache-bom4747-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741377610.577714,VS0,VE315"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"The request body could not be parsed.\"\n}"
+										},
+										{
+											"name": "204 No Content",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"productId\": 2585,\r\n    \"Quantity\": 1\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:{Cartid}/items/:itemId",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":{Cartid}",
+														"items",
+														":itemId"
+													],
+													"variable": [
+														{
+															"key": "{Cartid}",
+															"value": "rfKnExbTMxCsfwgLpkBSR"
+														},
+														{
+															"key": "itemId",
+															"value": "530029838"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 08 Mar 2025 10:44:38 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4751-BOM, cache-bom4751-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741430678.783441,VS0,VE725"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Delete an Item in the Cart",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://simple-grocery-store-api.glitch.me/Carts/:{Cartid}/items/:itemId",
+											"protocol": "https",
+											"host": [
+												"simple-grocery-store-api",
+												"glitch",
+												"me"
+											],
+											"path": [
+												"Carts",
+												":{Cartid}",
+												"items",
+												":itemId"
+											],
+											"variable": [
+												{
+													"key": "{Cartid}",
+													"value": "rfKnExbTMxCsfwgLpkBSR"
+												},
+												{
+													"key": "itemId",
+													"value": "530029838"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "204 Sucess",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:{Cartid}/items/:itemId",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":{Cartid}",
+														"items",
+														":itemId"
+													],
+													"variable": [
+														{
+															"key": "{Cartid}",
+															"value": "rfKnExbTMxCsfwgLpkBSR"
+														},
+														{
+															"key": "itemId",
+															"value": "530029838"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 08 Mar 2025 10:48:13 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-maa10230-MAA, cache-maa10230-MAA"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741430893.869041,VS0,VE478"
+												}
+											],
+											"cookie": [],
+											"body": null
+										},
+										{
+											"name": "404 not found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/Carts/:{Cartid}/items/:itemId",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"Carts",
+														":{Cartid}",
+														"items",
+														":itemId"
+													],
+													"variable": [
+														{
+															"key": "{Cartid}",
+															"value": "rfKnExbTMxCsfwgLpkBSR"
+														},
+														{
+															"key": "itemId",
+															"value": "530029839"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "38"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"26-kiX41s8vcMg6dcboJIJUafLAT+s\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 08 Mar 2025 10:49:22 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-maa10230-MAA, cache-maa10230-MAA"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1741430962.614127,VS0,VE1012"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"No item with id 530029839.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "New Request",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Orders",
+							"item": [
+								{
+									"name": "Create a New Order 1",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "68a851f2d23d49a79d33aa0f04c108137da085a5d90df5902a19a1e6319e512a",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"cartId\":\"x981FKkAzJ-V5Ggar5zz2\",\r\n    \"customerName\":\"SY\",\r\n    \"comment\":\"My First Order!\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://simple-grocery-store-api.glitch.me/orders",
+											"protocol": "https",
+											"host": [
+												"simple-grocery-store-api",
+												"glitch",
+												"me"
+											],
+											"path": [
+												"orders"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "201 Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"cartId\":\"x981FKkAzJ-V5Ggar5zz2\",\r\n    \"customerName\":\"SY\",\r\n    \"comment\":\"My First Order!\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/orders",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"orders"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "50"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"32-2J5PBQ73obh9r2629zsCisqlolE\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 04:47:23 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4749-BOM, cache-bom4749-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742014043.862092,VS0,VE860"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"created\": true,\n    \"orderId\": \"j_KXqY3jp28bgGlTzZ-ez\"\n}"
+										},
+										{
+											"name": "401 Unauthorised",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"cartId\":\"x981FKkAzJ-V5Ggar5zz2\",\r\n    \"customerName\":\"SY\",\r\n    \"comment\":\"My First Order!\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/orders",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"orders"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "50"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"32-2J5PBQ73obh9r2629zsCisqlolE\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 04:47:23 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4749-BOM, cache-bom4749-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742014043.862092,VS0,VE860"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"created\": true,\n    \"orderId\": \"j_KXqY3jp28bgGlTzZ-ez\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Create a New Order 2",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "68a851f2d23d49a79d33aa0f04c108137da085a5d90df5902a19a1e6319e512a",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"cartId\":\"x981FKkAzJ-V5Ggar5zz2\",\r\n    \"customerName\":\"SY\",\r\n    \"comment\":\"My First Order!\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "https://simple-grocery-store-api.glitch.me/orders",
+											"protocol": "https",
+											"host": [
+												"simple-grocery-store-api",
+												"glitch",
+												"me"
+											],
+											"path": [
+												"orders"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "201 Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"cartId\":\"x981FKkAzJ-V5Ggar5zz2\",\r\n    \"customerName\":\"SY\",\r\n    \"comment\":\"My First Order!\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/orders",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"orders"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "50"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"32-2J5PBQ73obh9r2629zsCisqlolE\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 04:47:23 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4749-BOM, cache-bom4749-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742014043.862092,VS0,VE860"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"created\": true,\n    \"orderId\": \"j_KXqY3jp28bgGlTzZ-ez\"\n}"
+										},
+										{
+											"name": "401 Unauthorised",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"cartId\":\"x981FKkAzJ-V5Ggar5zz2\",\r\n    \"customerName\":\"SY\",\r\n    \"comment\":\"My First Order!\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/orders",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"orders"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "50"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"32-2J5PBQ73obh9r2629zsCisqlolE\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 04:47:23 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4749-BOM, cache-bom4749-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742014043.862092,VS0,VE860"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"created\": true,\n    \"orderId\": \"j_KXqY3jp28bgGlTzZ-ez\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Get all Orders",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": [
+										{
+											"name": "200 OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{Grocery API Test URL}}/Orders",
+													"host": [
+														"{{Grocery API Test URL}}"
+													],
+													"path": [
+														"Orders"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "173"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"ad-smgincZApyQ1jzWL1an9YoSNA+c\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 12:41:22 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4734-BOM, cache-bom4734-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742042482.244579,VS0,VE451"
+												}
+											],
+											"cookie": [],
+											"body": "[\n    {\n        \"id\": \"j_KXqY3jp28bgGlTzZ-ez\",\n        \"items\": [\n            {\n                \"id\": 84417536,\n                \"productId\": 2177,\n                \"quantity\": 1\n            }\n        ],\n        \"customerName\": \"SY\",\n        \"created\": \"2025-03-15T04:47:22.979Z\",\n        \"comment\": \"My First Order!\"\n    }\n]"
+										},
+										{
+											"name": "404 Not Found",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{Grocery API Test URL}}/Order",
+													"host": [
+														"{{Grocery API Test URL}}"
+													],
+													"path": [
+														"Order"
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "84"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"54-0M1W4PX+XMa0VrPIhDCvHEdTW2w\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 12:41:54 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4734-BOM, cache-bom4734-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742042514.091595,VS0,VE270"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"The resource could not be found. Check your endpoint and request method.\"\n}"
+										}
+									]
+								},
+								{
+									"name": "Update an Order",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"customerName\": \"SY\",\r\n    \"created\": \"2025-03-15T04:47:22.979Z\",\r\n    \"comment\": \"My First Order!\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{Grocery API Test URL}}/Orders/:orderId",
+											"host": [
+												"{{Grocery API Test URL}}"
+											],
+											"path": [
+												"Orders",
+												":orderId"
+											],
+											"variable": [
+												{
+													"key": "orderId",
+													"value": "j_KXqY3jp28bgGlTzZ-ez"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "204 No Content",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"customerName\": \"SSY\",\r\n    \"comment\": \"My First Update to the Order!\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{Grocery API Test URL}}/Orders/:orderId",
+													"host": [
+														"{{Grocery API Test URL}}"
+													],
+													"path": [
+														"Orders",
+														":orderId"
+													],
+													"variable": [
+														{
+															"key": "orderId",
+															"value": "j_KXqY3jp28bgGlTzZ-ez"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 12:46:57 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4731-BOM, cache-bom4731-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742042817.091355,VS0,VE720"
+												}
+											],
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Delete an Order",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "{{Grrocery API test Auth Token}}",
+													"type": "string"
+												}
+											]
+										},
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "https://simple-grocery-store-api.glitch.me/orders/:orderId",
+											"protocol": "https",
+											"host": [
+												"simple-grocery-store-api",
+												"glitch",
+												"me"
+											],
+											"path": [
+												"orders",
+												":orderId"
+											],
+											"variable": [
+												{
+													"key": "orderId",
+													"value": "41926495"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "204 Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/orders/:orderId",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"orders",
+														":orderId"
+													],
+													"variable": [
+														{
+															"key": "orderId",
+															"value": "Jf-W2tpD0tsij5a6jPxyr"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "plain",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 12:56:36 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4736-BOM, cache-bom4736-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742043396.013235,VS0,VE578"
+												}
+											],
+											"cookie": [],
+											"body": null
+										},
+										{
+											"name": "404 Not Found",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/orders/:orderId",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"orders",
+														":orderId"
+													],
+													"variable": [
+														{
+															"key": "orderId",
+															"value": "Jf-W2tpD0tsij5a6jPxy"
+														}
+													]
+												}
+											},
+											"status": "Not Found",
+											"code": 404,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "50"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"32-16x2QRzm3xz9JoEzotXszqNFR6M\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 12:57:00 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4736-BOM, cache-bom4736-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742043420.125672,VS0,VE276"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"No order with id Jf-W2tpD0tsij5a6jPxy.\"\n}"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "Authentication",
+							"item": [
+								{
+									"name": "Registering new API client",
+									"request": {
+										"method": "GET",
+										"header": []
+									},
+									"response": [
+										{
+											"name": "201 Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"clientName\": \"SY\",\r\n    \"clientEmail\": \"yerpudeshubham@gmail.com\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/api-clients",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"api-clients"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "82"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"52-UXPYqPoW40U0JxS1B/e2gBMZP98\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 03:21:55 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4736-BOM, cache-bom4736-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742008915.211868,VS0,VE599"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"accessToken\": \"68a851f2d23d49a79d33aa0f04c108137da085a5d90df5902a19a1e6319e512a\"\n}"
+										},
+										{
+											"name": "409 Conflict",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"clientName\": \"SY\",\r\n    \"clientEmail\": \"yerpudeshubham@gmail.com\"\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "https://simple-grocery-store-api.glitch.me/api-clients",
+													"protocol": "https",
+													"host": [
+														"simple-grocery-store-api",
+														"glitch",
+														"me"
+													],
+													"path": [
+														"api-clients"
+													]
+												}
+											},
+											"status": "Conflict",
+											"code": 409,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Connection",
+													"value": "keep-alive"
+												},
+												{
+													"key": "Content-Length",
+													"value": "65"
+												},
+												{
+													"key": "x-powered-by",
+													"value": "Express"
+												},
+												{
+													"key": "etag",
+													"value": "W/\"41-rjAEsJfLskSzU5wzBOncJcKHOOY\""
+												},
+												{
+													"key": "content-type",
+													"value": "application/json; charset=utf-8"
+												},
+												{
+													"key": "Accept-Ranges",
+													"value": "bytes"
+												},
+												{
+													"key": "Date",
+													"value": "Sat, 15 Mar 2025 03:22:27 GMT"
+												},
+												{
+													"key": "Via",
+													"value": "1.1 varnish"
+												},
+												{
+													"key": "X-Served-By",
+													"value": "cache-bom4736-BOM, cache-bom4736-BOM"
+												},
+												{
+													"key": "X-Cache",
+													"value": "MISS, MISS"
+												},
+												{
+													"key": "X-Cache-Hits",
+													"value": "0, 0"
+												},
+												{
+													"key": "X-Timer",
+													"value": "S1742008947.766867,VS0,VE328"
+												}
+											],
+											"cookie": [],
+											"body": "{\n    \"error\": \"API client already registered. Try a different email.\"\n}"
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Post data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201]);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/info",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"info"
+					]
+				},
+				"description": "This is a POST request, submitting data to an API via the request body. This request submits JSON data, and the data is reflected in the response.\n\nA successful POST request typically returns a `200 OK` or `201 Created` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Update data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful PUT request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Add your name in the body\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/info?id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"info"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
+			},
+			"response": []
+		},
+		{
+			"name": "Delete data",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful DELETE request\", function () {",
+							"    pm.expect(pm.response.code).to.be.oneOf([200, 202, 204]);",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_url}}/info?id=1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"info"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "id",
+			"value": "1"
+		},
+		{
+			"key": "base_url",
+			"value": "https://postman-rest-api-learner.glitch.me/"
+		},
+		{
+			"key": "Grrocery API test Auth Token",
+			"value": "68a851f2d23d49a79d33aa0f04c108137da085a5d90df5902a19a1e6319e512a",
+			"type": "default"
+		},
+		{
+			"key": "Grocery API Test URL",
+			"value": "https://simple-grocery-store-api.glitch.me",
+			"type": "default"
+		}
+	]
+}
